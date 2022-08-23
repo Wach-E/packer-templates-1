@@ -52,7 +52,8 @@ provisioners:
   - scripts/compilers_build_tool_chains.sh
   - scripts/net-tools.sh
   - scripts/vcs.sh
-
+  - scripts/cosign-install.sh
+  
 - type: shell
   scripts:
   - scripts/ibm-advanced-tool-chain.sh
