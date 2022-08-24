@@ -30,11 +30,11 @@ __network_setup_xenial() {
 export DEBIAN_FRONTEND=noninteractive
 # Force use of ipv4
 echo 'Acquire::ForceIPv4 "true";' | tee /etc/apt/apt.conf.d/99force-ipv4
-apt update -qyy
 . /etc/lsb-release
 sed -i "s#MIRROR#${MIRROR}#g" /etc/apt/sources.list
 sed -i "s#DISTRIB_CODENAME#${DISTRIB_CODENAME}#g" /etc/apt/sources.list
 dpkg --remove-architecture i386
+apt update -qyy
 apt install ruby curl gnupg wget git software-properties-common md5deep openssl fuse hashdeep snapd dnsutils -y --no-install-recommends
 apt dist-upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
 
