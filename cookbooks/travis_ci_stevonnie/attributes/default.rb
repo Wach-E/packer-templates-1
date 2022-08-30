@@ -98,7 +98,7 @@ override['travis_packer_templates']['job_board']['languages'] = %w[
 
 override['travis_docker']['version'] = '5:20.10.7~3-0~ubuntu-xenial'
 override['travis_docker']['binary']['version'] = '20.10.17'
-override['travis_docker']['compose']['url'] = 'https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64'
-override['travis_docker']['compose']['sha256sum'] = 'f3f10cf3dbb8107e9ba2ea5f23c1d2159ff7321d16f0a23051d68d8e2547b323'
+override['travis_docker']['compose']['url'] = 'https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-Linux-x86_64'
+override['travis_docker']['compose']['sha256sum'] = '41e9657c8abd7d656c3a40df1ae9c1171930313707a3abd5420ec8852b59eeb7'
 override['travis_docker']['binary']['url'] = 'https://download.docker.com/linux/static/stable/x86_64/docker-20.10.17.tgz'
-override['travis_docker']['binary']['checksum'] = '34ad50146fce29b28e5115a1e8510dd5232459c9a4a9f28f65909f92cca314d9'
+override['travis_docker']['binary']['checksum'] = '969210917b5548621a2b541caf00f86cc6963c6cf0fb13265b9731c3b98974d9'
