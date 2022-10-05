@@ -130,7 +130,7 @@ provisioners:
    - chmod 600 /etc/sudoers.d/travis
    - chmod 644 /etc/apt/sources.list
 
-  # Creare image metadata tarball
+  # Create image metadata tarball
 - type: shell
   scripts:
   - scripts/create-job-board-data-lxd.sh
@@ -147,10 +147,17 @@ provisioners:
   destination: tmp/image-metadata-{{ user `image_name` }}.tar.bz2
   direction: download
 
+  # Fix permissions for .cargo
 - type: shell
   inline:
    - "chown -R travis: /home/travis/.cargo/"
 
+  # Fix Scala/JVM missing config
+- type: shell
+  inline:
+  - echo -e "-Xms2048M\n-Xmx2048M\n-Xss6M" > /tmp/jvmopts
+  - mkdir -p /etc/sbt/
+  - mv /tmp/jvmopts /etc/sbt/jvmopts
 
 # cleanup
 - type: shell
