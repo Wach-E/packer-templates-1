@@ -155,7 +155,7 @@ provisioners:
 
   # Fix Scala/JVM missing config
 - type: shell
-  inline:
+  script:
   - echo -e "-Xms2048M\n-Xmx2048M\n-Xss6M" > /tmp/jvmopts
   - mkdir -p /etc/sbt/
   - mv /tmp/jvmopts /etc/sbt/jvmopts
