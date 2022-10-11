@@ -1,8 +1,3 @@
-
-Filter changed files
- 47  
-lxd/scripts/cosign-install.sh
-@@ -0,0 +1,47 @@
 #!/usr/bin/env bash
 
 set -o errexit
