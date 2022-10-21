@@ -14,8 +14,6 @@ __install_gimme() {
   curl -sL -o $HOME/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
   chmod +x $HOME/bin/gimme
   ls -al /tmp/
-  sudo chmod +x /tmp/__common-lib.sh
-  ls -al /tmp/
 }
 
 main "$@"
