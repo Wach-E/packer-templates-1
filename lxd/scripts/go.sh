@@ -13,6 +13,7 @@ __install_gimme() {
   mkdir -p $HOME/bin
   curl -sL -o $HOME/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
   chmod +x $HOME/bin/gimme
+  ls -al /tmp/
 }
 
 main "$@"
