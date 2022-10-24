@@ -76,9 +76,9 @@ provisioners:
   scripts:
   - scripts/elixir.sh
   - scripts/erlang.sh
+  - scripts/python.sh
   - scripts/ruby.sh
   - scripts/go.sh
-  - scripts/python.sh
   - scripts/php.sh
   - scripts/nodejs.sh
   - scripts/perl.sh
